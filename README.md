@@ -74,7 +74,7 @@ We also initialized some important master data (i.e., data about the entity) as 
 ```sql
 INSERT INTO user_types (user_type) 
     VALUES
-        ('ADMIN'), ('USER')
+        ('ADMIN'), ('STUDENT')
 ```
 
 All of these statements are in `create_schema.py`. That is, you only need to run this file using the following command:
@@ -137,7 +137,9 @@ The system can authenticate each user by matching their identity (i.e., username
 
 Since we do not store passwords plainly, when you receive a plain password from users, you need to hash it before comparing against the database.
 
-You must implement function `login` in `models.py`. This function must return a Boolean value indicating whether the identity provided matches with the database or not.
+You must implement function `login` in `models.py`. This function must return the user type of the user.
+
+> 🐥 You must check with `views.py` to see appropriate return values for those functions.
 
 ## Feature Set 2 - Students
 
