@@ -1,0 +1,22 @@
+# Ignore everything
+/*
+
+# But not these files...
+!.gitignore
+!README.md
+
+!src/
+src/*
+
+!run.py
+!src/views.py
+!src/models.py
+!src/utils.py
+!src/tests
+!pytest.ini
+!create_schema.py
+
+__pycache__/
+.pytest_cache/
+
+.DS_Store/
