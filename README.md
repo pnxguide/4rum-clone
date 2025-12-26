@@ -29,7 +29,6 @@ All you need to do is to **modify the only file, `models.py`**, to make it satis
 In this task, we have already designed and defined the database schema for this application. The definition is as the following SQL statements:
 
 ```sql
-CREATE SEQUENCE id_sequence_user_types START 1;
 CREATE TABLE user_types (
     id INTEGER PRIMARY KEY DEFAULT nextval('id_sequence_user_types'),
     user_type VARCHAR NOT NULL
@@ -72,9 +71,9 @@ CREATE TABLE course_users (
 We also initialized some important master data (i.e., data about the entity) as follows:
 
 ```sql
-INSERT INTO user_types (user_type) 
+INSERT INTO user_types (id, user_type) 
     VALUES
-        ('ADMIN'), ('STUDENT')
+        (1, 'ADMIN'), (2, 'STUDENT')
 ```
 
 All of these statements are in `create_schema.py`. That is, you only need to run this file using the following command:
